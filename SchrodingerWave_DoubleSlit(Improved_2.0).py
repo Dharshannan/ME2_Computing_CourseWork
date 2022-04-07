@@ -122,9 +122,9 @@ for i in range(0,k):
 
 #print(A)
 #print(M)
-
+# Convert the A matrix to a compressed sparse column using scipy for faster calculations of complex co-efficient in the matrix 
 Asp = csc_matrix(A)
-
+# Solve the matrices for each time step:
 for s in range(1,Nt):     
     vec = psi.reshape((k)) # reshape the psi matrix into a column vector
     b = np.matmul(M,vec) # compute the RHS column b by matrix multiplying M and vec
